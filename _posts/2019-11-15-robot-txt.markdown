@@ -1,0 +1,9 @@
+---
+layout: post
+title: Robot Text
+categories: jekyll update
+---
+
+En robot.txt är till för att ge instructioner till robotar, tex. att blockera dem från vissa delar.
+
+Såhär fungerar det: roboten besöker webbsidans url men kollar först efter en fil som heter robot.txt tex. http://www.example.com/robots.txt, där hittar den instructionera i mitt fall har jag valt att utesluta robotar från hela min sida, detta visar att roboten inte bör gå in på någon av mina sidor. Däremot kan roboten välja att ignorera min avvisning.

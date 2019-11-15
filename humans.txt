@@ -1,0 +1,21 @@
+/* TEAM */
+	Developer, student: Tina Wendpaap
+	Contact: tw222eu@student.lnu.se
+	Github: Tinawend
+	From: Kalmar, Sweden
+
+
+
+/* THANKS */
+
+	Teacher: Johan Leitet
+	Teacher: Mats Loock
+	From: Sweden
+
+		
+
+/* SITE */
+	Last update:2019/11/15
+	Language:  English / Swedish
+	Doctype:HTML5
+	IDE: visual studio code
