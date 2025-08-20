@@ -5,6 +5,10 @@ import CssBaseline from '@mui/material/CssBaseline';
 import theme from './theme';
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import Livsstil from './pages/Livsstil';
+import Teknik from './pages/Teknik';
+import Om from './pages/Om';
+import PostPage from './pages/PostPage';
 
 function App() {
   return (
@@ -14,6 +18,10 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/category/lifestyle" element={<Livsstil />} />
+            <Route path="/category/tech" element={<Teknik />} />
+            <Route path="/about" element={<Om />} />
+            <Route path="/post/:id" element={<PostPage />} />
           </Routes>
         </Layout>
       </Router>

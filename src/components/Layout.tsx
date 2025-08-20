@@ -20,15 +20,12 @@ import {
 import { Link as RouterLink } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import PinterestIcon from '@mui/icons-material/Pinterest';
 
 const categories = [
-  { name: 'Home', path: '/' },
-  { name: 'Lifestyle', path: '/category/lifestyle' },
-  { name: 'Tech', path: '/category/tech' },
-  { name: 'Travel', path: '/category/travel' },
-  { name: 'About', path: '/about' },
+  { name: 'Hem', path: '/' },
+  { name: 'Livsstil', path: '/category/lifestyle' },
+  { name: 'Teknik', path: '/category/tech' },
+  { name: 'Om', path: '/about' },
 ];
 
 interface LayoutProps {
@@ -56,7 +53,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        My Blog
+        Code & Chlorophyll
       </Typography>
       <Divider />
       <List>
@@ -79,7 +76,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#FDF7F6' }}>
       <AppBar 
         position="static" 
         color="default" 
@@ -116,7 +113,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 textAlign: 'center',
               }}
             >
-              My Blog
+              Code & Chlorophyll
             </Typography>
 
             {!isMobile && (
@@ -152,12 +149,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               >
                 <GitHubIcon />
               </IconButton>
-              <IconButton color="primary">
-                <InstagramIcon />
-              </IconButton>
-              <IconButton color="primary">
-                <PinterestIcon />
-              </IconButton>
             </Box>
           </Toolbar>
         </Container>
@@ -179,7 +170,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {drawer}
       </Drawer>
       
-      <Container component="main" sx={{ flex: 1, py: 8 }}>
+      <Container component="main" sx={{ flex: 1, py: 8}}>
         {children}
       </Container>
 
@@ -199,7 +190,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             align="center"
             sx={{ mb: 2 }}
           >
-            © {new Date().getFullYear()} My Blog. Built with React and TypeScript.
+            © {new Date().getFullYear()} Code & Chlorophyll. Built with React and TypeScript.
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
             {categories.map((category) => (
