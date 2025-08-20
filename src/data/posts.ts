@@ -11,42 +11,21 @@ export interface Post {
 export const posts: Post[] = [
   {
     id: 1,
-    title: 'Kom igång med React och TypeScript',
-    excerpt: 'Lär dig bygga moderna webbapplikationer med React och TypeScript. Vi går igenom allt från installation till driftsättning.',
+    title: 'AI-verktyget Cursor',
+    excerpt: 'Idag har jag testat på ett nytt verktyg som heter Cursor!',
     date: '2024-03-20',
     category: 'Teknik',
-    imageUrl: '/blog/images/react-typescript.jpg',
-    content: `React och TypeScript är en kraftfull kombination för att bygga moderna webbapplikationer. I denna guide går vi igenom hur du installerar nödvändiga verktyg, sätter upp ett nytt projekt och skriver din första komponent. Vi diskuterar även typning, props och state i TypeScript, samt hur du kan dra nytta av typkontroll för att undvika vanliga buggar. Slutligen visar vi hur du bygger och distribuerar din applikation till produktion.`,
+    imageUrl: '/blog/images/cursor.png',
+    content: `Idag har jag testat på ett nytt verktyg som heter Cursor – och det var faktiskt riktigt roligt att jobba med! ✨
+
+Jag använde det för att sätta upp grunderna till den här bloggen, som är byggd i React och TypeScript. Men vad är Cursor egentligen? Kort sagt är det en modern kodeditor med inbyggd AI som kan hjälpa en när man programmerar. Det betyder att man kan få förslag, tips och ibland till och med färdiga kodsnuttar direkt när man skriver. Lite som att ha en hjälpreda bredvid sig som alltid är redo med idéer.
+
+För mig innebar det att jag kom igång snabbt, utan att behöva fastna i alla små tekniska detaljer som annars kan ta tid. Det kändes faktiskt ganska smidigt – jag kunde fokusera mer på själva bloggen och mindre på allt runtomkring.
+
+Nu är grunden lagd, och jag ser fram emot att bygga vidare – både med fler inlägg och med lite mer personlighet i designen. 🚀`,
   },
   {
     id: 2,
-    title: 'Bästa praxis för React-utveckling',
-    excerpt: 'Upptäck bästa praxis och mönster för att bygga skalbara React-applikationer.',
-    date: '2024-03-21',
-    category: 'Teknik',
-    imageUrl: '/blog/images/react-best-practices.jpg',
-    content: `För att bygga skalbara och underhållbara React-appar är det viktigt att följa vissa principer. Använd återanvändbara komponenter, håll logik och presentation separerade, och dra nytta av hooks för att hantera state och sid-effekter. Strukturera din kod i mappar och använd TypeScript för att få bättre typkontroll. Testa dina komponenter och använd verktyg som ESLint och Prettier för att hålla koden ren.`,
-  },
-  {
-    id: 3,
-    title: 'Förstå TypeScript-typer',
-    excerpt: 'Djupdyk i TypeScript-typer och hur de kan göra din kod mer robust.',
-    date: '2024-03-22',
-    category: 'Teknik',
-    imageUrl: '/blog/images/typescript-types.jpg',
-    content: `TypeScript erbjuder ett rikt typ-system som hjälper dig att skriva säkrare kod. Lär dig skillnaden mellan primitiva typer, gränssnitt (interfaces), typer (types) och generiska typer. Vi visar exempel på hur du kan använda union types, type guards och typalias för att skapa flexibla och robusta applikationer.`,
-  },
-  {
-    id: 4,
-    title: 'Moderna verktyg för webbutveckling',
-    excerpt: 'Utforska viktiga verktyg och hjälpmedel för modern webbutveckling.',
-    date: '2024-03-23',
-    category: 'Teknik',
-    imageUrl: '/blog/images/web-development-tools.jpg',
-    content: `Det finns många verktyg som kan effektivisera din utvecklingsprocess. Några populära är VS Code, Git, Prettier, ESLint och olika browser extensions. Vi går igenom hur du installerar och konfigurerar dessa verktyg, samt tips på plugins och inställningar som kan göra dig mer produktiv som utvecklare.`,
-  },
-  {
-    id: 5,
     title: 'Hemodlade tomater och hemlagad tomatsoppa',
     excerpt: 'Idag har jag plockat tomater från trädgården och lagat ihop en god tomatsoppa.',
     date: '2025-08-10',
