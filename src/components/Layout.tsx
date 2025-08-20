@@ -53,7 +53,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Code & Chlorophyll
+        Liv & Logik
       </Typography>
       <Divider />
       <List>
@@ -113,7 +113,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 textAlign: 'center',
               }}
             >
-              Code & Chlorophyll
+              Liv & Logik
             </Typography>
 
             {!isMobile && (
@@ -190,7 +190,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             align="center"
             sx={{ mb: 2 }}
           >
-            © {new Date().getFullYear()} Code & Chlorophyll. Built with React and TypeScript.
+            © {new Date().getFullYear()} Liv & Logik.
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
             {categories.map((category) => (
