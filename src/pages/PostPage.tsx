@@ -1,11 +1,50 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link as RouterLink } from 'react-router-dom';
 import { posts } from '../data/posts';
 import { Container, Typography, Box, Chip, Divider, Button } from '@mui/material';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism-okaidia.css';
+
+const addCopyButtons = () => {
+  document.querySelectorAll('pre').forEach((block) => {
+    if (block.querySelector('.copy-btn')) return; // redan knapp
+
+    const button = document.createElement('button');
+    button.textContent = 'Kopiera';
+    button.className = 'copy-btn';
+    Object.assign(button.style, {
+      position: 'absolute',
+      top: '8px',
+      right: '8px',
+      background: '#444',
+      color: '#fff',
+      border: 'none',
+      borderRadius: '4px',
+      padding: '4px 8px',
+      cursor: 'pointer',
+      fontSize: '0.8rem',
+    });
+
+    button.addEventListener('click', () => {
+      const code = block.querySelector('code')?.textContent || '';
+      navigator.clipboard.writeText(code);
+      button.textContent = 'Kopierat!';
+      setTimeout(() => (button.textContent = 'Kopiera'), 1500);
+    });
+
+    block.style.position = 'relative';
+    block.appendChild(button);
+  });
+};
 
 const PostPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const post = posts.find((p) => p.id === Number(id));
+
+  useEffect(() => {
+    Prism.highlightAll();
+    addCopyButtons();
+  }, [post]);
 
   if (!post) {
     return (
@@ -26,21 +65,50 @@ const PostPage: React.FC = () => {
         <Typography variant="h3" component="h1" gutterBottom>
           {post.title}
         </Typography>
+
         <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', mb: 2 }}>
           <Chip label={post.category} color="secondary" size="small" />
           <Typography variant="subtitle2" color="text.secondary">
             {post.date}
           </Typography>
         </Box>
+
         <img
           src={post.imageUrl}
           alt={post.title}
-          style={{ width: '100%', maxHeight: 400, objectFit: 'cover', borderRadius: 8, marginBottom: 24 }}
+          style={{
+            width: '100%',
+            maxHeight: 400,
+            objectFit: 'cover',
+            borderRadius: 8,
+            marginBottom: 24,
+          }}
         />
+
         <Divider sx={{ mb: 3 }} />
-        <Typography variant="body1" color="text.primary" sx={{ whiteSpace: 'pre-line' }}>
-          {post.content}
-        </Typography>
+
+        {/* Rendera varje content-block */}
+        {post.content.map((block, index) => {
+          if (block.type === 'code') {
+            return (
+              <pre key={index} className="language-bash" style={{ borderRadius: 8, overflow: 'auto' }}>
+                <code>{block.content}</code>
+              </pre>
+            );
+          } else {
+            return (
+              <Typography
+                key={index}
+                variant="body1"
+                color="text.primary"
+                sx={{ whiteSpace: 'pre-line', mb: 2 }}
+              >
+                {block.content}
+              </Typography>
+            );
+          }
+        })}
+
         <Box sx={{ mt: 4 }}>
           <Button component={RouterLink} to="/" variant="outlined" color="primary">
             Tillbaka till startsidan
@@ -51,4 +119,4 @@ const PostPage: React.FC = () => {
   );
 };
 
-export default PostPage; 
+export default PostPage;

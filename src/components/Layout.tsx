@@ -53,7 +53,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Liv & Logik
+        TechMamman
       </Typography>
       <Divider />
       <List>
@@ -113,7 +113,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 textAlign: 'center',
               }}
             >
-              Liv & Logik
+              TechMamman
             </Typography>
 
             {!isMobile && (
@@ -190,7 +190,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             align="center"
             sx={{ mb: 2 }}
           >
-            © {new Date().getFullYear()} Liv & Logik.
+            © {new Date().getFullYear()} TechMamman.
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
             {categories.map((category) => (

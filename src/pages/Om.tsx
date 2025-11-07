@@ -10,13 +10,15 @@ const Om: React.FC = () => {
         </Typography>
         <Divider sx={{ maxWidth: 100, mx: 'auto', mb: 4 }} />
         <Typography variant="body1" color="text.secondary">
-        Välkommen till Liv & Logik – min plats på nätet där vardag möter teknik. 🌿💻
+        Välkommen till TechMamman – min plats på nätet där vardag möter teknik. 🌿💻
 
-Här delar jag med mig av livet hemma: allt från odling i krukor, brödbak och matlagning, till små projekt i hemmet som gör vardagen lite mysigare. Samtidigt är tech och kod en stor del av min vardag, så du kommer också hitta inlägg om utveckling, appar jag bygger och tankar kring att arbeta i IT-branschen.
+Jag heter Tina Wendpaap och bor i Strömstad tillsammans med min man, vår lilla pojke och en till på väg (beräknad i februari). Vi båda arbetar som fullstackutvecklare – jag på hemmaplan och han i Fredrikstad i Norge.
 
-Bloggen är helt enkelt en blandning av det jag tycker om mest – en plats där både doften av nybakat bröd och känslan av en snygg kodrad får ta plats.
+Här delar jag med mig av livet hemma: allt från odling i pallkrage, brödbak och matlagning till små projekt som gör vardagen lite enklare och roligare. Samtidigt är teknik och kod en naturlig del av mitt liv, så du kommer också hitta inlägg om apputveckling, programmering och livet som utvecklare.
 
-Hoppas du vill hänga med!
+Bloggen är helt enkelt en blandning av det jag tycker om mest – där både doften av nybakat bröd och känslan av en snygg kodrad får plats.
+
+Hoppas du vill hänga med! ✨
         </Typography>
       </Box>
     </Container>
