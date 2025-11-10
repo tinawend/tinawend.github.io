@@ -111,5 +111,25 @@ Att använda internt test är ett smidigt sätt att säkerställa att appen fung
 Mer information om appen och nästa steg i lanseringen kommer snart – håll ögonen öppna! 👀`
       }
     ]
+  },
+  {
+    id: 4,
+    title: 'Halloweenstämning hemma 🎃',
+    excerpt: 'Lite höstpyssel med ljung, pumpor och glada barn i utklädnader!',
+    date: '2025-11-02',
+    category: 'Livsstil',
+    imageUrl: '/blog/images/halloween-decor.jpg', // <-- byt till din faktiska bild
+    content: [
+      {
+        type: 'text',
+        content: `Halloween kom och gick – men vilken mysig kväll det blev! 🍁
+
+Jag planterade lite ljung i en kruka på uteplatsen, tillsammans med en prydnadspumpa och halloweenpumpan som min man gjorde. Det var så fint att se allt lysa upp i mörkret när kvällen kom. 🎃✨
+
+Det var också roligt att se alla barn som gick runt och samlade godis! Så många fina utklädnader – allt från små katter till miniatyrhäxor. Man märker verkligen hur mycket glädje det sprider, både för barnen och oss som öppnar dörren.
+
+Nu när ljusen i pumpan börjar ta slut känns det lite grått och tråkigt, men samtidigt mysigt att hösten fortsätter med sina färger och mörka kvällar och snart kan man nog smyga upp lite julljusslingor där ute med. 🍂🕯️`
+      }
+    ]
   }
 ];
