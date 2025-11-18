@@ -89,23 +89,48 @@ const PostPage: React.FC = () => {
 
         {/* Rendera varje content-block */}
         {post.content.map((block, index) => {
-          if (block.type === 'code') {
-            return (
-              <pre key={index} className="language-bash" style={{ borderRadius: 8, overflow: 'auto' }}>
-                <code>{block.content}</code>
-              </pre>
-            );
-          } else {
-            return (
-              <Typography
-                key={index}
-                variant="body1"
-                color="text.primary"
-                sx={{ whiteSpace: 'pre-line', mb: 2 }}
-              >
-                {block.content}
-              </Typography>
-            );
+          switch (block.type) {
+            case 'code':
+              return (
+                <pre key={index} className="language-bash" style={{ borderRadius: 8, overflow: 'auto' }}>
+                  <code>{block.content}</code>
+                </pre>
+              );
+            case 'image':
+              const isSmall = block.size === 'small' || !block.size; // default to small
+              return (
+                <Box key={index} sx={{ my: 3 }}>
+                  <img
+                    src={block.src}
+                    alt={block.alt}
+                    loading="lazy"
+                    style={{
+                      width: '100%',
+                      maxHeight: isSmall ? 500 : undefined,
+                      objectFit: isSmall ? 'cover' : 'contain',
+                      borderRadius: 8,
+                      display: 'block',
+                    }}
+                  />
+                  {block.caption && (
+                    <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 1 }}>
+                      {block.caption}
+                    </Typography>
+                  )}
+                </Box>
+              );
+            case 'text':
+            default:
+              return (
+                <Typography
+                  key={index}
+                  variant="body1"
+                  color="text.primary"
+                  sx={{ whiteSpace: 'pre-line', mb: 2 }}
+                >
+                  {block.content}
+                </Typography>
+              );
           }
         })}
 
