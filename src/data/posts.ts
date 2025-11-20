@@ -32,7 +32,7 @@ export const posts: Post[] = [
     excerpt: 'Idag har jag testat på ett nytt verktyg som heter Cursor!',
     date: '2024-03-20',
     category: 'Teknik',
-    imageUrl: '/blog/images/cursor.png',
+    imageUrl: '/images/cursor.png',
     content: [
       {
         type: 'text',
@@ -52,7 +52,7 @@ Nu är grunden lagd, och jag ser fram emot att bygga vidare – både med fler i
     excerpt: 'Idag har jag plockat tomater från trädgården och lagat ihop en god tomatsoppa.',
     date: '2025-08-10',
     category: 'Livsstil',
-    imageUrl: '/blog/images/homegrown-tomatoes.jpg',
+    imageUrl: '/images/homegrown-tomatoes.jpg',
     content: [
       {
         type: 'text',
@@ -89,7 +89,7 @@ Toppa gärna med färska örter och kanske ett gott bröd till. 🍞`
     excerpt: 'Jag har nyligen publicerat min app för internt test på Google Play Console. Här berättar jag hur processen gick till.',
     date: '2025-11-07',
     category: 'Teknik',
-    imageUrl: '/blog/images/google-play-test.png',
+    imageUrl: '/images/google-play-test.png',
     content: [
       {
         type: 'text',
@@ -130,7 +130,7 @@ Mer information om appen och nästa steg i lanseringen kommer snart – håll ö
     excerpt: 'Lite höstpyssel med ljung, pumpor och glada barn i utklädnader!',
     date: '2025-11-02',
     category: 'Livsstil',
-    imageUrl: '/blog/images/halloween-decor.jpg', // <-- byt till din faktiska bild
+    imageUrl: '/images/halloween-decor.jpg',
     content: [
       {
         type: 'text',
@@ -150,7 +150,7 @@ Nu när ljusen i pumpan börjar ta slut känns det lite grått och tråkigt, men
     excerpt: 'En heldag på spa. 💆‍♀️✨',
     date: '2025-11-12',
     category: 'Livsstil',
-    imageUrl: '/blog/images/loka-brunn-swim.jpg',
+    imageUrl: '/images/loka-brunn-swim.jpg',
     content: [
       {
         type: 'text',
@@ -162,7 +162,7 @@ Nu när ljusen i pumpan börjar ta slut känns det lite grått och tråkigt, men
       },
       {
         type: 'image',
-        src: '/blog/images/loka-brunn-fruit.jpg',
+        src: '/images/loka-brunn-fruit.jpg',
         alt: 'Inne i spaavdelningen på Loka Brunn',
         caption: 'Poolhänget i den varma delen av spat.',
         size: 'big'
@@ -173,13 +173,13 @@ Nu när ljusen i pumpan börjar ta slut känns det lite grått och tråkigt, men
       },
       {
         type: 'image',
-        src: '/blog/images/loka-brunn-forratt.jpeg',
+        src: '/images/loka-brunn-forratt.jpeg',
         alt: 'Förrätt på Loka Brunn',
         caption: 'En krämig förrätt med smak av höst.'
       },
       {
         type: 'image',
-        src: '/blog/images/loka-brunn-dessert.jpeg',
+        src: '/images/loka-brunn-dessert.jpeg',
         alt: 'Dessert på Loka Brunn',
         caption: 'En fräsh blåbärsmousse med rom.',
         size: 'small'
@@ -196,7 +196,7 @@ Nu när ljusen i pumpan börjar ta slut känns det lite grått och tråkigt, men
     excerpt: 'Jag har skördat min jalapeño och picklat den i en klassisk 1-2-3-lag!',
     date: '2025-11-09',
     category: 'Livsstil',
-    imageUrl: '/blog/images/jalapeno.jpg',
+    imageUrl: '/images/jalapeno.jpg',
     content: [
       {
         type: 'text',
@@ -217,7 +217,7 @@ Nu när ljusen i pumpan börjar ta slut känns det lite grått och tråkigt, men
       },
       {
         type: 'image',
-        src: '/blog/images/c-reaper.jpg',
+        src: '/images/c-reaper.jpg',
         alt: 'Carolina Reaper',
         caption: 'Världens starkaste chili.',
         size: 'small'
