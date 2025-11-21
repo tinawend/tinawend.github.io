@@ -237,7 +237,7 @@ Nu när ljusen i pumpan börjar ta slut känns det lite grått och tråkigt, men
     title: 'Snickers Cheesecake',
     excerpt: 'Jag har bakat en riktigt god Snickers-cheesecake – här är receptet! 🍫🥜',
     date: '2025-11-20',
-    category: 'Recept',
+    category: 'Livsstil',
     imageUrl: '/images/cake-peace.jpg',
     content: [
       {
