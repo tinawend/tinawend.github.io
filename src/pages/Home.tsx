@@ -20,6 +20,10 @@ const sortedPosts = [...posts].sort((a, b) => new Date(b.date).getTime() - new D
 const recentPosts = sortedPosts.slice(0, 6);
 
 const Home: React.FC = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Container maxWidth="lg">
       {/* Recent Posts Section */}

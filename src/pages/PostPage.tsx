@@ -42,6 +42,10 @@ const PostPage: React.FC = () => {
   const post = posts.find((p) => p.id === Number(id));
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
+  useEffect(() => {
     Prism.highlightAll();
     addCopyButtons();
   }, [post]);

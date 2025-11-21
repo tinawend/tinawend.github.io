@@ -14,7 +14,9 @@ import {
 import { Link as RouterLink } from 'react-router-dom';
 import { posts } from '../data/posts';
 
-const teknikPosts = posts.filter(post => post.category === 'Teknik');
+const teknikPosts = [...posts]
+  .filter(post => post.category === 'Teknik')
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 const Teknik: React.FC = () => {
   return (

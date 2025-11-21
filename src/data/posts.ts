@@ -231,5 +231,113 @@ Nu när ljusen i pumpan börjar ta slut känns det lite grått och tråkigt, men
         content: `Att odla chili har verkligen blivit en av mina favoritgrejer under säsongen – både rogivande och spännande på samma gång. Nu står burkarna med picklad jalapeño i kylen och väntar på att få ge lite hetta till höstmaten. 🌿✨`
       }
     ]
-  }  
+  },
+  {
+    id: 7,
+    title: 'Snickers Cheesecake',
+    excerpt: 'Jag har bakat en riktigt god Snickers-cheesecake – här är receptet! 🍫🥜',
+    date: '2025-11-20',
+    category: 'Recept',
+    imageUrl: '/images/cake-peace.jpg',
+    content: [
+      {
+        type: 'text',
+        content: `Jag har bakat en Snickers-cheesecake – och alltså… det här kan vara bland det godaste jag gjort 🤤🍰✨
+  
+  Den är krämig, chokladig, jordnötssmörig och helt perfekt om man älskar Snickers (som jag gör!). Cheesecake råkar dessutom vara min mans absoluta favorit, så det kändes extra kul att testa just den här varianten 😄💛 
+  Här kommer receptet så att du också kan testa:`
+      },
+      {
+        type: 'text',
+        content: `Botten:
+  200 g digestive
+  70 g smör`
+      },
+      {
+        type: 'text',
+        content: `Fyllning:
+  300 g cream cheese
+  150 g jordnötssmör
+  100 g florsocker
+  3 dl grädde`
+      },
+      {
+        type: 'text',
+        content: `Topping:
+  5 Snickers bars
+  1 dl grädde`
+      },
+      {
+        type: 'text',
+        content: `Gör så här:
+  1. Krossa digestivekexen till fina smulor. Smält smöret och blanda med kexsmulorna. Pressa ut i botten av en form med löstagbar kant och ställ i kylen.`
+      },
+      {
+        type: 'image',
+        src: '/images/cake-bottom.jpg',
+        alt: 'Botten av Snickers-cheesecake',
+        caption: 'Botten av Snickers-cheesecake.',
+        size: 'big'
+      },
+      {
+        type: 'text',
+        content: `
+  2. Blanda cream cheese, jordnötssmör och florsocker till en jämn smet. Vänd ner den ovispade grädden i smeten. Bred ut allt över digestivebotten.`
+      },
+      {
+        type: 'image',
+        src: '/images/cake-cream.jpg',
+        alt: 'fyllningen av Snickers-cheesecake',
+        caption: 'fyllningen av Snickers-cheesecake.',
+        size: 'big'
+      },
+      {
+        type: 'text',
+        content: `
+  3. Skär Snickers i bitar och värm tillsammans med grädden i micron tills det smält samman. Blanda ordentligt och låt svalna helt. Häll över cheesecaken och bred ut försiktigt.`
+      },
+      {
+        type: 'image',
+        src: '/images/cake-top-layer.jpg',
+        alt: 'topp-lagret av Snickers-cheesecake',
+        caption: 'topp-lagret av Snickers-cheesecake.',
+        size: 'big'
+      },
+      {
+        type: 'text',
+        content: `
+  4. Låt stå i kylen i minst 4 timmar – jag lät den stå över natten för bästa resultat ❄️🍰
+  
+  Servera och njut! 😉✨`
+      },
+    ]
+  },
+  {
+    id: 8,
+    title: 'Nyhet: Google Gemini 3 lanserad – och jag vill testa!',
+    excerpt: 'Google har släppt Gemini 3 med ny kodapp och rekordresultat – så här tänker jag kring det.',
+    date: '2025-11-21',
+    category: 'Teknik',
+    imageUrl: '/images/gemini3.png',
+    content: [
+      {
+        type: 'text',
+        content: `Nyheten har landat – Google har lanserat sitt senaste stora språkmodellsystem Gemini 3, bara sju månader efter Gemini 2.5. I samma svep har de även släppt en ny kodapp kallad Antigravity, som ska kombinera promptfält, terminal och webbläsare i ett enda flöde för kodare.`
+      },
+      {
+        type: 'text',
+        content: `Enligt TechCrunch uppnådde Gemini 3 ett benchmarkresultat på 37,4 på “Humanity’s Last Exam” – betydligt högre än tidigare toppmodell. Källa: https://techcrunch.com/2025/11/18/google-launches-gemini-3-with-new-coding-app-and-record-benchmark-scores/`
+      },
+      {
+        type: 'text',
+        content: `Det här är förstås väldigt spännande för mig som utvecklare – tanken på att kunna använda ett verktyg som Antigravity, där kod, terminal och webbläsare samspelar, känns verkligen som ett steg framåt för arbetsflödet. Jag ser fram emot att testa det själv och se hur det fungerar i praktiken.`
+      },
+      {
+        type: 'text',
+        content: `Jag kommer att hålla koll på tillgänglighet och funktioner – och såklart återkomma med mina egna erfarenheter här på bloggen. Häng gärna med mig på den resan!`
+      }
+    ]
+  }
+  
+    
 ];
