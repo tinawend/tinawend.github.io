@@ -5,7 +5,7 @@ import { Container, Typography, Box, Chip, Divider, Button } from '@mui/material
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 import { useLanguage } from '../contexts/LanguageContext';
-import { getPostTitle, getPostExcerpt, getPostCategory, getPostContent } from '../utils/postUtils';
+import { getPostTitle, getPostCategory, getPostContent } from '../utils/postUtils';
 
 const addCopyButtons = (copyText: string, copiedText: string) => {
   document.querySelectorAll('pre').forEach((block) => {
