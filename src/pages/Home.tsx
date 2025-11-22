@@ -13,6 +13,8 @@ import {
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { posts } from '../data/posts';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getPostTitle, getPostExcerpt, getPostCategory } from '../utils/postUtils';
 
 // Sort posts by date (latest first)
 const sortedPosts = [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -20,6 +22,8 @@ const sortedPosts = [...posts].sort((a, b) => new Date(b.date).getTime() - new D
 const recentPosts = sortedPosts.slice(0, 6);
 
 const Home: React.FC = () => {
+  const { language, t } = useLanguage();
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,7 +33,7 @@ const Home: React.FC = () => {
       {/* Recent Posts Section */}
       <Box sx={{ mb: 6, textAlign: 'center' }}>
         <Typography variant="h5" component="h2" gutterBottom>
-          Senaste inläggen
+          {t('home.recent')}
         </Typography>
         <Divider sx={{ maxWidth: 100, mx: 'auto', mb: 4 }} />
       </Box>
@@ -48,20 +52,20 @@ const Home: React.FC = () => {
                   component="img"
                   height="240"
                   image={post.imageUrl}
-                  alt={post.title}
+                  alt={getPostTitle(post, language)}
                 />
                 <CardContent sx={{ textAlign: 'center' }}>
                   <Chip
-                    label={post.category}
+                    label={getPostCategory(post, language)}
                     color="secondary"
                     size="small"
                     sx={{ mb: 2 }}
                   />
                   <Typography variant="h6" component="h3" gutterBottom>
-                    {post.title}
+                    {getPostTitle(post, language)}
                   </Typography>
                   <Typography variant="body2" color="text.secondary" paragraph>
-                    {post.excerpt}
+                    {getPostExcerpt(post, language)}
                   </Typography>
                   <Typography variant="subtitle2" color="text.secondary">
                     {post.date}

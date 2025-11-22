@@ -13,17 +13,24 @@ import {
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { posts } from '../data/posts';
-
-const livsstilPosts = [...posts]
-  .filter(post => post.category === 'Livsstil')
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+import { useLanguage } from '../contexts/LanguageContext';
+import { getPostTitle, getPostExcerpt, getPostCategory } from '../utils/postUtils';
 
 const Livsstil: React.FC = () => {
+  const { language, t } = useLanguage();
+
+  const livsstilPosts = [...posts]
+    .filter(post => {
+      const category = typeof post.category === 'string' ? post.category : post.category.sv;
+      return category === 'Livsstil';
+    })
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
   return (
     <Container maxWidth="lg">
       <Box sx={{ mb: 6, textAlign: 'center' }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Livsstil
+          {t('category.lifestyle')}
         </Typography>
         <Divider sx={{ maxWidth: 100, mx: 'auto', mb: 4 }} />
       </Box>
@@ -40,20 +47,20 @@ const Livsstil: React.FC = () => {
                   component="img"
                   height="240"
                   image={post.imageUrl}
-                  alt={post.title}
+                  alt={getPostTitle(post, language)}
                 />
                 <CardContent sx={{ textAlign: 'center' }}>
                   <Chip
-                    label={post.category}
+                    label={getPostCategory(post, language)}
                     color="secondary"
                     size="small"
                     sx={{ mb: 2 }}
                   />
                   <Typography variant="h6" component="h3" gutterBottom>
-                    {post.title}
+                    {getPostTitle(post, language)}
                   </Typography>
                   <Typography variant="body2" color="text.secondary" paragraph>
-                    {post.excerpt}
+                    {getPostExcerpt(post, language)}
                   </Typography>
                   <Typography variant="subtitle2" color="text.secondary">
                     {post.date}

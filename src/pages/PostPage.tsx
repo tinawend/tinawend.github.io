@@ -4,13 +4,15 @@ import { posts } from '../data/posts';
 import { Container, Typography, Box, Chip, Divider, Button } from '@mui/material';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getPostTitle, getPostExcerpt, getPostCategory, getPostContent } from '../utils/postUtils';
 
-const addCopyButtons = () => {
+const addCopyButtons = (copyText: string, copiedText: string) => {
   document.querySelectorAll('pre').forEach((block) => {
     if (block.querySelector('.copy-btn')) return; // redan knapp
 
     const button = document.createElement('button');
-    button.textContent = 'Kopiera';
+    button.textContent = copyText;
     button.className = 'copy-btn';
     Object.assign(button.style, {
       position: 'absolute',
@@ -28,8 +30,8 @@ const addCopyButtons = () => {
     button.addEventListener('click', () => {
       const code = block.querySelector('code')?.textContent || '';
       navigator.clipboard.writeText(code);
-      button.textContent = 'Kopierat!';
-      setTimeout(() => (button.textContent = 'Kopiera'), 1500);
+      button.textContent = copiedText;
+      setTimeout(() => (button.textContent = copyText), 1500);
     });
 
     block.style.position = 'relative';
@@ -40,6 +42,7 @@ const addCopyButtons = () => {
 const PostPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const post = posts.find((p) => p.id === Number(id));
+  const { language, t } = useLanguage();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -47,31 +50,37 @@ const PostPage: React.FC = () => {
 
   useEffect(() => {
     Prism.highlightAll();
-    addCopyButtons();
-  }, [post]);
+    const copyText = language === 'sv' ? 'Kopiera' : 'Copy';
+    const copiedText = language === 'sv' ? 'Kopierat!' : 'Copied!';
+    addCopyButtons(copyText, copiedText);
+  }, [post, language]);
 
   if (!post) {
     return (
       <Container maxWidth="md">
         <Typography variant="h4" component="h1" gutterBottom>
-          Inlägget hittades inte
+          {t('post.notFound')}
         </Typography>
         <Button component={RouterLink} to="/" variant="contained" color="primary">
-          Tillbaka till startsidan
+          {t('post.back')}
         </Button>
       </Container>
     );
   }
 
+  const title = getPostTitle(post, language);
+  const category = getPostCategory(post, language);
+  const content = getPostContent(post, language);
+
   return (
     <Container maxWidth="md">
       <Box sx={{ my: 6 }}>
         <Typography variant="h3" component="h1" gutterBottom>
-          {post.title}
+          {title}
         </Typography>
 
         <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', mb: 2 }}>
-          <Chip label={post.category} color="secondary" size="small" />
+          <Chip label={category} color="secondary" size="small" />
           <Typography variant="subtitle2" color="text.secondary">
             {post.date}
           </Typography>
@@ -79,7 +88,7 @@ const PostPage: React.FC = () => {
 
         <img
           src={post.imageUrl}
-          alt={post.title}
+          alt={title}
           style={{
             width: '100%',
             maxHeight: 400,
@@ -92,7 +101,7 @@ const PostPage: React.FC = () => {
         <Divider sx={{ mb: 3 }} />
 
         {/* Rendera varje content-block */}
-        {post.content.map((block, index) => {
+        {content.map((block, index) => {
           switch (block.type) {
             case 'code':
               return (
@@ -106,7 +115,7 @@ const PostPage: React.FC = () => {
                 <Box key={index} sx={{ my: 3 }}>
                   <img
                     src={block.src}
-                    alt={block.alt}
+                    alt={typeof block.alt === 'string' ? block.alt : block.alt[language]}
                     loading="lazy"
                     style={{
                       width: '100%',
@@ -118,13 +127,16 @@ const PostPage: React.FC = () => {
                   />
                   {block.caption && (
                     <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 1 }}>
-                      {block.caption}
+                      {typeof block.caption === 'string' ? block.caption : block.caption[language]}
                     </Typography>
                   )}
                 </Box>
               );
             case 'text':
             default:
+              const textContent = typeof block.content === 'string' 
+                ? block.content 
+                : block.content[language];
               return (
                 <Typography
                   key={index}
@@ -132,7 +144,7 @@ const PostPage: React.FC = () => {
                   color="text.primary"
                   sx={{ whiteSpace: 'pre-line', mb: 2 }}
                 >
-                  {block.content}
+                  {textContent}
                 </Typography>
               );
           }
@@ -140,7 +152,7 @@ const PostPage: React.FC = () => {
 
         <Box sx={{ mt: 4 }}>
           <Button component={RouterLink} to="/" variant="outlined" color="primary">
-            Tillbaka till startsidan
+            {t('post.back')}
           </Button>
         </Box>
       </Box>

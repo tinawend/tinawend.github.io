@@ -18,13 +18,8 @@ import {
 import { Link as RouterLink } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
-
-const categories = [
-  { name: 'Hem', path: '/' },
-  { name: 'Livsstil', path: '/category/lifestyle' },
-  { name: 'Teknik', path: '/category/tech' },
-  { name: 'Om', path: '/about' },
-];
+import { useLanguage } from '../contexts/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -34,10 +29,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t } = useLanguage();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  const categories = [
+    { name: t('nav.home'), path: '/', key: 'home' },
+    { name: t('nav.lifestyle'), path: '/category/lifestyle', key: 'lifestyle' },
+    { name: t('nav.tech'), path: '/category/tech', key: 'tech' },
+    { name: t('nav.about'), path: '/about', key: 'about' },
+  ];
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -48,7 +51,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <List>
         {categories.map((category) => (
           <ListItem 
-            key={category.name} 
+            key={category.key} 
             component={RouterLink} 
             to={category.path}
             sx={{
@@ -109,7 +112,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <Box sx={{ display: 'flex', gap: 3 }}>
                 {categories.map((category) => (
                   <Button
-                    key={category.name}
+                    key={category.key}
                     component={RouterLink}
                     to={category.path}
                     color="primary"
@@ -128,7 +131,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </Box>
             )}
 
-            <Box sx={{ display: 'flex', gap: 1 }}>
+            <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+              <LanguageSwitcher />
               <IconButton
                 color="primary"
                 component="a"
@@ -179,12 +183,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             align="center"
             sx={{ mb: 2 }}
           >
-            © {new Date().getFullYear()} TechMamman.
+            {t('footer.copyright').replace('{year}', new Date().getFullYear().toString())}
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
             {categories.map((category) => (
               <Button
-                key={category.name}
+                key={category.key}
                 component={RouterLink}
                 to={category.path}
                 color="primary"
