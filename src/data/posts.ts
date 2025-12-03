@@ -550,5 +550,57 @@ Now that the lights in the pumpkin are starting to run out, it feels a bit gray 
         }
       }
     ]
-  } 
+  },
+  {
+    id: 10,
+    title: 'Saffranssnurror i juletid',
+    excerpt: 'Idag har jag bakat saffransbullar med extra fyllning – perfekt så här i juletider.',
+    date: '2025-12-01',
+    category: { sv: 'Livsstil', en: 'Lifestyle' },
+    imageUrl: '/images/saffransbullar.jpg',
+    content: [
+      {
+        type: 'text',
+        content: `Det börjar verkligen kännas som jul nu. Den här tiden på året blir kvällarna lite mysigare, ljusen lite varmare och dofterna i köket lite godare ✨ Saffran är en stor favorit hos mig, så i veckan passade jag på att baka saffransbullar. Det är något speciellt med att blanda ihop en deg som både doftar och ser ut som jul 🎄
+  
+  Jag följde ett recept från Arla men gjorde några egna justeringar, framför allt för att få bullarna extra saftiga. Jag dubblade fyllningen, hoppade över mandelspånen och formade bullarna som snurror. Resultatet blev otroligt mjuka och smakrika saffranssnurror som gjorde hela köket sådär härligt juldoftande ✨`
+      },
+      {
+        type: 'text',
+        content: `Ingredienser
+  
+  Deg:
+  50 g jäst
+  100 g smör
+  5 dl mjölk
+  2 påsar saffran (1 g)
+  1 1/2 dl strösocker
+  1/2 tsk salt
+  ca 17 dl vetemjöl
+  
+  Pensling:
+  2 ägg,
+  pärlsocker
+  
+  Fyllning:
+  400 g smör, rumsvarmt
+  400 g riven mandelmassa
+  2 tsk kardemumma`
+      },
+      {
+        type: 'text',
+        content: `Så här gjorde jag:
+  
+  Jag började med att smula jästen i bunken till min bakmaskin. Sedan värmde jag mjölken till 37 grader, blandade ner saffranet i mjölken och hällde den över jästen. Jag la sedan i smöret och tillsatte socker och salt. Efter det arbetade jag in mjölet lite i taget tills degen blev mjuk och smidig. Den fick jäsa under bakduk i cirka 45 minuter 🕒
+  
+  Under tiden rörde jag ihop fyllningen – smör, mandelmassa och kardemumma – tills den blev jämn och krämig 😍 När degen jäst klart kavlade jag ut den till en stor rektangel och bredde ut fyllningen på halva och vek sedan den andra halvan på. Jag skar degen i remsor, tvinnade dem och snurrade ihop dem (Jag gjorde även några vanliga rullar). Bullarna lade jag direkt på bakplåtspapper utan formar. De fick jäsa i ytterligare cirka 30 minuter.
+  
+  Till sist penslade jag snurrorna med uppvispat ägg och la på pärlsocker och gräddade dem i 225 grader i cirka 8 minuter, tills de fått en vacker gyllene färg ✨
+  
+  Det blev riktigt fina saffranssnurror – mjuka, saftiga och fulla av smak. Precis det man vill ha så här i juletider ❄️`
+      }
+    ]
+  }
+  
+  
 ];
