@@ -553,21 +553,27 @@ Now that the lights in the pumpkin are starting to run out, it feels a bit gray 
   },
   {
     id: 10,
-    title: 'Saffranssnurror i juletid',
-    excerpt: 'Idag har jag bakat saffransbullar med extra fyllning – perfekt så här i juletider.',
+    title: { sv: 'Saffranssnurror i juletid', en: 'Saffron twists for Christmas' },
+    excerpt: { sv: 'Idag har jag bakat saffransbullar med extra fyllning – perfekt så här i juletider.', en: 'Today I baked saffron buns with extra filling – perfect for this time of year.' },
     date: '2025-12-01',
     category: { sv: 'Livsstil', en: 'Lifestyle' },
     imageUrl: '/images/saffransbullar.jpg',
     content: [
       {
         type: 'text',
-        content: `Det börjar verkligen kännas som jul nu. Den här tiden på året blir kvällarna lite mysigare, ljusen lite varmare och dofterna i köket lite godare ✨ Saffran är en stor favorit hos mig, så i veckan passade jag på att baka saffransbullar. Det är något speciellt med att blanda ihop en deg som både doftar och ser ut som jul 🎄
+        content: {
+          sv: `Det börjar verkligen kännas som jul nu. Den här tiden på året blir kvällarna lite mysigare, ljusen lite varmare och dofterna i köket lite godare ✨ Saffran är en stor favorit hos mig, så i veckan passade jag på att baka saffransbullar. Det är något speciellt med att blanda ihop en deg som både doftar och ser ut som jul 🎄
   
-  Jag följde ett recept från Arla men gjorde några egna justeringar, framför allt för att få bullarna extra saftiga. Jag dubblade fyllningen, hoppade över mandelspånen och formade bullarna som snurror. Resultatet blev otroligt mjuka och smakrika saffranssnurror som gjorde hela köket sådär härligt juldoftande ✨`
+  Jag följde ett recept från Arla men gjorde några egna justeringar, framför allt för att få bullarna extra saftiga. Jag dubblade fyllningen, hoppade över mandelspånen och formade bullarna som snurror. Resultatet blev otroligt mjuka och smakrika saffranssnurror som gjorde hela köket sådär härligt juldoftande ✨`,
+          en: `It really starts to feel like Christmas now. This time of year, the evenings become a bit cozier, the lights a bit warmer and the scents in the kitchen a bit more delicious ✨ Saffron is a big favorite of mine, so this week I took the opportunity to bake saffron buns. There's something special about mixing together a dough that both smells and looks like Christmas 🎄
+  
+  I followed a recipe from Arla but made some of my own adjustments, especially to make the buns extra juicy. I doubled the filling, skipped the almond slices and shaped the buns as twists. The result became incredibly soft and flavorful saffron twists that made the whole kitchen wonderfully Christmas-scented ✨`
+        }
       },
       {
         type: 'text',
-        content: `Ingredienser
+        content: {
+          sv: `Ingredienser
   
   Deg:
   50 g jäst
@@ -585,11 +591,32 @@ Now that the lights in the pumpkin are starting to run out, it feels a bit gray 
   Fyllning:
   400 g smör, rumsvarmt
   400 g riven mandelmassa
-  2 tsk kardemumma`
+  2 tsk kardemumma`,
+          en: `Ingredients
+  
+  Dough:
+  50 g yeast
+  100 g butter
+  5 dl milk
+  2 bags saffron (1 g)
+  1 1/2 dl granulated sugar
+  1/2 tsp salt
+  about 17 dl wheat flour
+  
+  Glaze:
+  2 eggs,
+  pearl sugar
+  
+  Filling:
+  400 g butter, room temperature
+  400 g grated almond paste
+  2 tsp cardamom`
+        }
       },
       {
         type: 'text',
-        content: `Så här gjorde jag:
+        content: {
+          sv: `Så här gjorde jag:
   
   Jag började med att smula jästen i bunken till min bakmaskin. Sedan värmde jag mjölken till 37 grader, blandade ner saffranet i mjölken och hällde den över jästen. Jag la sedan i smöret och tillsatte socker och salt. Efter det arbetade jag in mjölet lite i taget tills degen blev mjuk och smidig. Den fick jäsa under bakduk i cirka 45 minuter 🕒
   
@@ -597,10 +624,67 @@ Now that the lights in the pumpkin are starting to run out, it feels a bit gray 
   
   Till sist penslade jag snurrorna med uppvispat ägg och la på pärlsocker och gräddade dem i 225 grader i cirka 8 minuter, tills de fått en vacker gyllene färg ✨
   
-  Det blev riktigt fina saffranssnurror – mjuka, saftiga och fulla av smak. Precis det man vill ha så här i juletider ❄️`
+  Det blev riktigt fina saffranssnurror – mjuka, saftiga och fulla av smak. Precis det man vill ha så här i juletider ❄️`,
+          en: `Here's how I did it:
+  
+  I started by crumbling the yeast into the bowl of my bread machine. Then I heated the milk to 37 degrees, mixed in the saffron in the milk and poured it over the yeast. I then added the butter and added sugar and salt. After that, I worked in the flour little by little until the dough became soft and smooth. It was left to rise under a baking cloth for about 45 minutes 🕒
+  
+  Meanwhile, I mixed together the filling – butter, almond paste and cardamom – until it became smooth and creamy 😍 When the dough had finished rising, I rolled it out into a large rectangle and spread the filling on half and then folded the other half over. I cut the dough into strips, twisted them and rolled them up (I also made some regular rolls). I placed the buns directly on baking paper without forms. They were left to rise for another about 30 minutes.
+  
+  Finally, I brushed the twists with beaten egg and added pearl sugar and baked them at 225 degrees for about 8 minutes, until they got a beautiful golden color ✨
+  
+  They became really nice saffron twists – soft, juicy and full of flavor. Exactly what you want this time of year ❄️`
+        }
+      }
+    ]
+  },
+  {
+    id: 11,
+    title: { sv: 'En julrimsgenerator byggd med Google Gemini 🎄', en: 'A Christmas rhyme generator built with Google Gemini 🎄' },
+    excerpt: { sv: 'Jag har byggt en egen julrimsgenerator med hjälp av Google Gemini – perfekt när fantasin tryter i juletider.', en: 'I built my own Christmas rhyme generator using Google Gemini – perfect when inspiration runs out during the holidays.' },
+    date: '2025-12-12',
+    category: { sv: 'Teknik', en: 'Tech' },
+    imageUrl: '/images/christmas-rhyme-generator.png',
+    content: [
+      {
+        type: 'text',
+        content: {
+          sv: `Julen närmar sig med stormsteg och med den kommer också den årliga utmaningen – att hitta på bra julrim. Jag tycker det är mysigt, men ibland står det helt still och då är det skönt med lite hjälp på traven. 🎄✨
+  
+  Därför bestämde jag mig för att bygga en egen julrimsgenerator, mest som ett roligt litet projekt men också för att faktiskt ha något användbart inför julklappsinslagningen.`,
+          en: `Christmas is approaching at full speed and with it comes the annual challenge – coming up with good Christmas rhymes. I think it's cozy, but sometimes it comes to a complete standstill and then it's nice to have a little help. 🎄✨
+  
+  That's why I decided to build my own Christmas rhyme generator, mostly as a fun little project but also to actually have something useful for wrapping Christmas presents.`
+        }
+      },
+      {
+        type: 'text',
+        content: {
+          sv: `Julrimsgeneratorn är byggd med hjälp av Google Gemini och fungerar genom att man helt enkelt beskriver vad presenten är och vilken ton man vill ha – och så genereras ett rim utifrån det. Fokus har varit att hålla det enkelt, snabbt och lättillgängligt, utan krångel.`,
+          en: `The Christmas rhyme generator is built using Google Gemini and works by simply describing what the gift is and what tone you want – and then a rhyme is generated based on that. The focus has been to keep it simple, fast and easily accessible, without hassle.`
+        }
+      },
+      {
+        type: 'text',
+        content: {
+          sv: `Det finns redan en fungerande gratisversion uppe, och länken till generatorn ligger i menyn här på bloggen för den som vill testa själv. Den är tänkt att vara ett litet hjälpmedel när fantasin tryter, inte något som ska kännas överarbetat eller komplicerat.`,
+          en: `There's already a working free version up, and the link to the generator is in the menu here on the blog for anyone who wants to try it themselves. It's meant to be a little helper when inspiration runs out, not something that should feel overworked or complicated.`
+        }
+      },
+      {
+        type: 'text',
+        content: {
+          sv: `Projektet var också ett kul sätt för mig att testa Gemini i praktiken och se hur väl det fungerar för den här typen av kreativ textgenerering. Det gav mig möjlighet att experimentera både med prompts och struktur, och samtidigt bygga något som faktiskt kommer till användning.`,
+          en: `The project was also a fun way for me to test Gemini in practice and see how well it works for this type of creative text generation. It gave me the opportunity to experiment with both prompts and structure, while building something that will actually be used.`
+        }
+      },
+      {
+        type: 'text',
+        content: {
+          sv: `Jag har redan några idéer på hur generatorn kan utvecklas vidare, men just nu känns det mest kul att den är live och går att använda. Perfekt tajming lagom till jul. 🎁✨`,
+          en: `I already have some ideas on how the generator can be developed further, but right now it feels most fun that it's live and can be used. Perfect timing just in time for Christmas. 🎁✨`
+        }
       }
     ]
   }
-  
-  
 ];
