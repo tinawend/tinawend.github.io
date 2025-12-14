@@ -36,11 +36,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   const categories = [
-    { name: t('nav.home'), path: '/', key: 'home' },
-    { name: t('nav.lifestyle'), path: '/category/lifestyle', key: 'lifestyle' },
-    { name: t('nav.tech'), path: '/category/tech', key: 'tech' },
-    { name: t('nav.about'), path: '/about', key: 'about' },
-    { name: t('nav.christmas'), path: '/christmas-rhyme/', key: 'christmas' },
+    { name: t('nav.home'), path: '/', key: 'home', external: false },
+    { name: t('nav.lifestyle'), path: '/category/lifestyle', key: 'lifestyle', external: false },
+    { name: t('nav.tech'), path: '/category/tech', key: 'tech', external: false },
+    { name: t('nav.about'), path: '/about', key: 'about', external: false },
+    { name: t('nav.christmas'), path: 'https://www.techmamman.se/christmas-rhyme/', key: 'christmas', external: true },
   ];
 
   const drawer = (
@@ -51,18 +51,34 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Divider />
       <List>
         {categories.map((category) => (
-          <ListItem 
-            key={category.key} 
-            component={RouterLink} 
-            to={category.path}
-            sx={{
-              textAlign: 'center',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            <ListItemText primary={category.name} />
-          </ListItem>
+          category.external ? (
+            <ListItem 
+              key={category.key} 
+              component="a" 
+              href={category.path}
+              sx={{
+                textAlign: 'center',
+                color: 'inherit',
+                textDecoration: 'none',
+                cursor: 'pointer',
+              }}
+            >
+              <ListItemText primary={category.name} />
+            </ListItem>
+          ) : (
+            <ListItem 
+              key={category.key} 
+              component={RouterLink} 
+              to={category.path}
+              sx={{
+                textAlign: 'center',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              <ListItemText primary={category.name} />
+            </ListItem>
+          )
         ))}
       </List>
     </Box>
@@ -112,22 +128,41 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {!isMobile && (
               <Box sx={{ display: 'flex', gap: 3 }}>
                 {categories.map((category) => (
-                  <Button
-                    key={category.key}
-                    component={RouterLink}
-                    to={category.path}
-                    color="primary"
-                    sx={{
-                      fontSize: '0.95rem',
-                      fontWeight: 500,
-                      '&:hover': {
-                        backgroundColor: 'transparent',
-                        color: 'secondary.main',
-                      },
-                    }}
-                  >
-                    {category.name}
-                  </Button>
+                  category.external ? (
+                    <Button
+                      key={category.key}
+                      component="a"
+                      href={category.path}
+                      color="primary"
+                      sx={{
+                        fontSize: '0.95rem',
+                        fontWeight: 500,
+                        '&:hover': {
+                          backgroundColor: 'transparent',
+                          color: 'secondary.main',
+                        },
+                      }}
+                    >
+                      {category.name}
+                    </Button>
+                  ) : (
+                    <Button
+                      key={category.key}
+                      component={RouterLink}
+                      to={category.path}
+                      color="primary"
+                      sx={{
+                        fontSize: '0.95rem',
+                        fontWeight: 500,
+                        '&:hover': {
+                          backgroundColor: 'transparent',
+                          color: 'secondary.main',
+                        },
+                      }}
+                    >
+                      {category.name}
+                    </Button>
+                  )
                 ))}
               </Box>
             )}
@@ -188,15 +223,27 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
             {categories.map((category) => (
-              <Button
-                key={category.key}
-                component={RouterLink}
-                to={category.path}
-                color="primary"
-                size="small"
-              >
-                {category.name}
-              </Button>
+              category.external ? (
+                <Button
+                  key={category.key}
+                  component="a"
+                  href={category.path}
+                  color="primary"
+                  size="small"
+                >
+                  {category.name}
+                </Button>
+              ) : (
+                <Button
+                  key={category.key}
+                  component={RouterLink}
+                  to={category.path}
+                  color="primary"
+                  size="small"
+                >
+                  {category.name}
+                </Button>
+              )
             ))}
           </Box>
         </Container>
