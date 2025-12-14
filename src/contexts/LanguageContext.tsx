@@ -17,6 +17,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.lifestyle': 'Livsstil',
     'nav.tech': 'Teknik',
     'nav.about': 'Om',
+    'nav.christmas': 'Julrim',
     // Home page
     'home.recent': 'Senaste inläggen',
     // Post page
@@ -34,6 +35,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.lifestyle': 'Lifestyle',
     'nav.tech': 'Tech',
     'nav.about': 'About',
+    'nav.christmas': 'Christmas Rhyme',
     // Home page
     'home.recent': 'Recent Posts',
     // Post page

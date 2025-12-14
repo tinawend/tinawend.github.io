@@ -40,6 +40,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: t('nav.lifestyle'), path: '/category/lifestyle', key: 'lifestyle' },
     { name: t('nav.tech'), path: '/category/tech', key: 'tech' },
     { name: t('nav.about'), path: '/about', key: 'about' },
+    { name: t('nav.christmas'), path: '/christmas-rhyme/', key: 'christmas' },
   ];
 
   const drawer = (
@@ -136,7 +137,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <IconButton
                 color="primary"
                 component="a"
-                href="https://github.com/tinawend/blog"
+                href="https://github.com/tinawend/tinawend.github.io"
                 target="_blank"
                 rel="noopener noreferrer"
               >

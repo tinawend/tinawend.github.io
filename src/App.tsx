@@ -17,7 +17,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <LanguageProvider>
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router basename="/">
           <ScrollToTop />
           <Layout>
             <Routes>
